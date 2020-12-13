@@ -2,15 +2,15 @@
 
 declare (strict_types = 1 );
 
-namespace src\products\_1domain;
+namespace Src\products\_1domain;
 
-use src\products\_1domain\ValueObjects\ProductsCost;
-use src\products\_1domain\ValueObjects\ProductsDescription;
-use src\products\_1domain\ValueObjects\ProductsName;
-use src\products\_1domain\ValueObjects\ProductsPrice;
-use src\products\_1domain\ValueObjects\ProductsToBuy;
-use src\products\_1domain\ValueObjects\ProductsToSell;
-use src\products\_1domain\ValueObjects\ToSellAndToBuyFalse;
+use Src\products\_1domain\ValueObjects\ProductsCost;
+use Src\products\_1domain\ValueObjects\ProductsDescription;
+use Src\products\_1domain\ValueObjects\ProductsName;
+use Src\products\_1domain\ValueObjects\ProductsPrice;
+use Src\products\_1domain\ValueObjects\ProductsToBuy;
+use Src\products\_1domain\ValueObjects\ProductsToSell;
+use Src\products\_1domain\ValueObjects\ToSellAndToBuyFalse;
 
 final class Products 
 {

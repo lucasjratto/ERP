@@ -2,9 +2,9 @@
 
 declare(strict_types = 1 );
 
-namespace src\products\_3infrastructure\Persistance\Eloquent;
+namespace Src\products\_3infrastructure\Persistance\Eloquent;
 
-use src\products\_1domain\Contracts\ProductsRepositoryContract;
+use Src\products\_1domain\Contracts\ProductsRepositoryContract;
 
 
 final class ProductsEloquentRepository implements ProductsRepositoryContract
@@ -19,6 +19,10 @@ final class ProductsEloquentRepository implements ProductsRepositoryContract
 
     public function search (){
         
+    }
+
+    public function all (){
+        return $this->ProductsEloquent::all();
     }
 
 }

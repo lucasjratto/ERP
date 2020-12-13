@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace src\products\_1domain\ValueObjects;
+namespace Src\products\_1domain\ValueObjects;
 
 final class ProductsPrice
 {

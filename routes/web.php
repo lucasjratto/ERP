@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use Src\products\_3infrastructure\Controllers\HomeProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products', [HomeProductsController::class, 'index']);

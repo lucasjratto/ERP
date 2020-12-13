@@ -2,7 +2,7 @@
 
 declare(strict_types = 1 );
 
-namespace src\products\_3infrastructure\Persistance\Eloquent;
+namespace Src\products\_3infrastructure\Persistance\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 
