@@ -10,16 +10,14 @@ final class GetAllProductsUseCase
 {
     private $products;
 
-    public function __construct()
+    public function __construct(ProductsRepositoryContract $products)
     {
-        $this->products = resolve(ProductsRepositoryContract::class);
+        $this->products = $products;
     }
 
-    public function __invoke()
+    public function __invoke(): array
     {
-        $productAll = $this->products->all();
-
-        return $productAll;
+        return $this->products->all();
     }
 
 }

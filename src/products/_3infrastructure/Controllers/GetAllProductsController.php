@@ -12,7 +12,9 @@ class GetAllProductsController
 
     public function __invoke()
     {
-        $products = new GetAllProductsUseCase();
+        $ProductsRepository = resolve(ProductsRepositoryContract::class);
+
+        $products = new GetAllProductsUseCase($ProductsRepository);
         return $products();
     }
 
