@@ -1,8 +1,8 @@
 <?php
 
-
+use App\Http\Controllers\HomeProductsController;
 use Illuminate\Support\Facades\Route;
-use Src\products\_3infrastructure\Controllers\HomeProductsController;
+
 
 /*
 |--------------------------------------------------------------------------
