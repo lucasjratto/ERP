@@ -13,7 +13,7 @@ class GetAllProductsController
 {
     public function __invoke()
     {
-        //$ProductsRepository = Factory::build(ProductsRepositoryContract::class);
+        
         $ProductsRepository = InfrastructureConfigInfrastructureConfig::build('ProductsRepository'); 
 
         $products = new GetAllProductsUseCase($ProductsRepository);
