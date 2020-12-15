@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Src\products\_1domain\Contracts;
+namespace Src\products\_3infrastructure\Persistence;
 
 interface ProductsRepositoryContract
 {

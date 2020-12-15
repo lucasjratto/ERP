@@ -4,8 +4,7 @@ declare(strict_types = 1 );
 
 namespace Src\products\_3infrastructure\Persistence\Eloquent;
 
-use Src\products\_1domain\Contracts\ProductsRepositoryContract;
-
+use Src\products\_3infrastructure\Persistence\ProductsRepositoryContract;
 
 final class ProductsEloquentRepository implements ProductsRepositoryContract
 {

@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Src\products\_1domain\Contracts\ProductsRepositoryContract;
+use Src\products\_3infrastructure\Persistence\Eloquent\ProductsEloquentRepository;
+use Src\products\_3infrastructure\Persistence\ProductsRepositoryContract;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -14,15 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $PS = config('ddd.persistenceSelect');
-        
-
-        $this->app->bind(
-                // Contract
-                config("ddd.persistenceTypes.$PS.productsInterface"),
-                // Instance
-                config("ddd.persistenceTypes.$PS.productsClass"),
-        );
+        $this->app->bind(ProductsRepositoryContract::class, ProductsEloquentRepository::class);
         
     }
 

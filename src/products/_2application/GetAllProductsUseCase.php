@@ -4,7 +4,7 @@ declare (strict_types = 1 );
 
 namespace Src\products\_2application;
 
-use Src\products\_1domain\Contracts\ProductsRepositoryContract;
+use Src\products\_3infrastructure\Persistence\ProductsRepositoryContract;
 
 final class GetAllProductsUseCase
 {
