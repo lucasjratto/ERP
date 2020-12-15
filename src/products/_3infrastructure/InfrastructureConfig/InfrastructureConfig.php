@@ -5,6 +5,7 @@ declare (strict_types = 1);
 namespace Src\products\_3infrastructure\InfrastructureConfig;
 
 use ReflectionClass;
+use Src\products\_3infrastructure\Bus\CommandBusContract;
 use Src\products\_3infrastructure\Bus\Laravel\CommandBus;
 use Src\products\_3infrastructure\Persistence\Eloquent\ProductsEloquentRepository;
 use Src\products\_3infrastructure\Persistence\ProductsRepositoryContract;
@@ -17,7 +18,11 @@ final class InfrastructureConfig
                                                         ProductsRepositoryContract::class,
                                                         ProductsEloquentRepository::class,
                                                     ],
-                            'Bus' => CommandBus::class,
+                            'Bus' =>    [
+                                            CommandBusContract::class,
+                                            CommandBus::class,
+                                        ]
+                            
                         ];
     
     private function __construct(){}
