@@ -15,7 +15,7 @@ final class GetAllProductsUseCase
         $this->products = $products;
     }
 
-    public function __invoke(): array
+    public function __invoke(): object
     {
         return $this->products->all();
     }
