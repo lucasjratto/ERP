@@ -2,9 +2,10 @@
 
 declare (strict_types = 1);
 
-namespace Src\products\_2application\Handlers;
+namespace Src\products\_2application\GetAllProducts\Handlers;
 
 use Src\products\_2application\CommandHandlerContract;
+use Src\products\_2application\GetAllProducts\Commands\GetAllProductsCommandContract;
 
 final class GetAllProductsHandler implements CommandHandlerContract
 {

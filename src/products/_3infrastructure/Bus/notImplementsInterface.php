@@ -4,8 +4,9 @@ declare (strict_types = 1);
 
 namespace Src\products\_3infrastructure\Bus;
 
+use Exception;
 
-interface CommandBusContract
+final class notImplementsInterface extends Exception
 {
-    static public function dispatch(object $command);
+
 }

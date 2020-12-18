@@ -18,10 +18,6 @@ final class InfrastructureConfig
                                                         ProductsRepositoryContract::class,
                                                         ProductsEloquentRepository::class,
                                                     ],
-                            'Bus' =>    [
-                                            CommandBusContract::class,
-                                            CommandBus::class,
-                                        ]
                             
                         ];
     
@@ -41,8 +37,8 @@ final class InfrastructureConfig
 
     static public function build (string $config): object
     {
-        $cl = new ReflectionClass(InfrastructureConfig::getConfigClass('ProductsRepository'));
-        if (!$cl->implementsInterface(InfrastructureConfig::getConfigContract('ProductsRepository'))) throw new notImplementsInterface();
+        $cl = new ReflectionClass(InfrastructureConfig::getConfigClass($config));
+        if (!$cl->implementsInterface(InfrastructureConfig::getConfigContract($config))) throw new notImplementsInterface();
 
         $class = self::$Config[$config][1];
         return new $class;
