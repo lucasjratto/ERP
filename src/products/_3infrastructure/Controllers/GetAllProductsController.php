@@ -16,7 +16,6 @@ class GetAllProductsController
         $ProductsRepository = InfrastructureConfig::build('ProductsRepository');
 
         $command = GetAllProductsCommand::create($ProductsRepository);
-
         return CommandBus::dispatch($command);
 
     }
